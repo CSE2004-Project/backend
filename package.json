@@ -1,24 +1,47 @@
 {
-  "license": "MIT",
+  "name": "backend",
+  "description": "<p align=\"center\">\r \t<h2 align=\"center\">The Deliverer - Backend</h2>\r \t<h4 align=\"center\">A food ordering app - Backend<h4>\r </p>",
+  "version": "1.0.0",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
     "test": "semistandard && nyc --reporter=lcov mocha tests/*",
     "lint": "semistandard --fix",
     "start": "node server.js",
-    "coverage": "codecov"
+    "coverage": "codecov",
+    "dev": "nodemon"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CSE2004-Project/backend.git"
+  },
+  "author": "Hishaam",
+  "bugs": {
+    "url": "https://github.com/CSE2004-Project/backend/issues"
+  },
+  "homepage": "https://github.com/CSE2004-Project/backend#readme",
+  "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
+    "pg": "^8.3.3",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5",
+    "uuid4": "^2.0.2",
     "winston": "^3.2.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
-    "codecov": "^3.6.5",
-    "mocha": "^7.1.2",
-    "nodemon": "^2.0.3",
-    "nyc": "^15.0.0",
-    "semistandard": "^14.2.0"
+    "codecov": "^3.7.2",
+    "mocha": "^7.2.0",
+    "nodemon": "^2.0.4",
+    "nyc": "^15.1.0",
+    "semistandard": "^14.2.3"
   }
 }
