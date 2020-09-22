@@ -32,7 +32,7 @@ const schema = {
     allowNull: false
   },
   pinCode: {
-    type: sequelize.INTEGER(7),
+    type: sequelize.INTEGER,
     allowNull: false
   }
 };
@@ -45,7 +45,7 @@ const userAddress = db.define('UserAddress', schema, options);
 
 userAddress.sync({ alter: true })
   .then(() => {
-    logger.info('Table Created');
+    logger.info('UserAddress Migration Made');
   })
   .catch(err => {
     logger.error('An Error Occurred:' + err);

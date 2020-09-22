@@ -57,7 +57,7 @@ const order = db.define('Order', schema, options);
 
 order.sync({ alter: true })
   .then(() => {
-    logger.info('Table Created');
+    logger.info('Orders Migrations Made');
   })
   .catch(err => {
     logger.error('An Error Occurred:' + err);

@@ -24,7 +24,7 @@ const schema = {
     }
   },
   quantity: {
-    type: sequelize.INTEGER(2),
+    type: sequelize.INTEGER,
     allowNull: false
   }
 };
@@ -37,7 +37,7 @@ const orderItems = db.define('OrderItems', schema, options);
 
 orderItems.sync({ alter: true })
   .then(() => {
-    logger.info('Table Created');
+    logger.info('OrderItems Migrations Made');
   })
   .catch(err => {
     logger.error('An Error Occurred:' + err);

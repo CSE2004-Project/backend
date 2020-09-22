@@ -24,7 +24,7 @@ const schema = {
     allowNull: false
   },
   price: {
-    type: sequelize.INTEGER(5),
+    type: sequelize.INTEGER,
     allowNull: false
   }
 };
@@ -37,7 +37,7 @@ const foodItems = db.define('FoodItems', schema, options);
 
 foodItems.sync({ alter: true })
   .then(() => {
-    logger.info('Table Created');
+    logger.info('FoodItems Migration Made');
   })
   .catch(err => {
     logger.error('An Error Occurred:' + err);

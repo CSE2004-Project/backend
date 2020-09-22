@@ -25,7 +25,7 @@ const schema = {
     allowNull: false
   },
   role: {
-    type: sequelize.INTEGER(1),
+    type: sequelize.INTEGER,
     allowNull: false,
     isIn: [[1, 2, 3]],
     defaultValue: 1
@@ -39,7 +39,7 @@ const User = db.define('User', schema, options);
 
 User.sync({ alter: true })
   .then(() => {
-    logger.info('Table Created');
+    logger.info('Users Migration Made');
   })
   .catch(err => {
     logger.error('An Error Occurred:' + err);

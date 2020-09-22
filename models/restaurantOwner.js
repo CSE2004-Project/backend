@@ -3,6 +3,10 @@ const db = require('../database/connection');
 const logger = require('../logging/logger');
 
 const schema = {
+  id: {
+    type: sequelize.UUID,
+    primaryKey: true
+  },
   userId: {
     type: sequelize.UUID,
     allowNull: false,
