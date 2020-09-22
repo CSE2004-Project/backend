@@ -17,7 +17,7 @@ const schema = {
     isEmail: true
   },
   phoneNumber: {
-    type: sequelize.INTEGER(12),
+    type: sequelize.STRING(12),
     allowNull: false
   },
   password: {
@@ -27,7 +27,8 @@ const schema = {
   role: {
     type: sequelize.INTEGER(1),
     allowNull: false,
-    isIn: [[1, 2, 3]]
+    isIn: [[1, 2, 3]],
+    defaultValue: 1
   }
 };
 

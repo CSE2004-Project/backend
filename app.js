@@ -36,7 +36,10 @@ require('./models/relations');
 // Logging
 app.use(morgan);
 
+// Import Routes
+const userRoutes = require('./routes/user');
+
 // Mount routes
 app.use('/', routes);
-
+app.use('/api/user', userRoutes);
 module.exports = app;
