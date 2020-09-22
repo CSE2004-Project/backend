@@ -33,7 +33,7 @@ const restaurantOwner = db.define('RestaurantOwner', schema, options);
 
 restaurantOwner.sync({ alter: true })
   .then(() => {
-    logger.info('Table Created');
+    logger.info('RestaurantOwner Migrations Done');
   })
   .catch(err => {
     logger.error('An Error Occurred:' + err);
