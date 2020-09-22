@@ -1,5 +1,5 @@
 const User = require('../models/user');
-// const UserAddress = require('../models/userAddress');
+const UserAddress = require('../models/userAddress');
 // const Order = require('../models/orders');
 // const OrderItem = require('../models/orderItems');
 const bcrypt = require('bcryptjs');
@@ -78,6 +78,46 @@ class UserController {
         code: 200,
         JWT: token,
         userDetails: exists
+      };
+    } catch (err) {
+      logger.error('An error occurred' + err);
+      return {
+        error: true,
+        message: 'An Error Occurred' + err,
+        code: 500
+      };
+    }
+  }
+
+  static async addAddress (userId, addressLine1, addressLine2, state, city, pinCode) {
+    try {
+      const filter = {
+        where: {
+          userId
+        }
+      };
+      const exists = await User.findOne(filter);
+      if (!exists) {
+        return {
+          error: true,
+          message: 'This user does not exist',
+          code: '404'
+        };
+      }
+      const userAddress = {
+        userId: userId,
+        addressId: uuid4(),
+        addressLine1: addressLine1,
+        addressLine2: addressLine2,
+        state: state,
+        city: city,
+        pinCode: pinCode
+      };
+      await UserAddress.create(userAddress);
+      return {
+        error: false,
+        message: 'Your address has been added successfully',
+        code: 201
       };
     } catch (err) {
       logger.error('An error occurred' + err);

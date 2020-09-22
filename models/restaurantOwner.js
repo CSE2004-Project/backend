@@ -5,11 +5,19 @@ const logger = require('../logging/logger');
 const schema = {
   userId: {
     type: sequelize.UUID,
-    allowNull: false
+    allowNull: false,
+    references: {
+      model: 'Users',
+      key: 'userId'
+    }
   },
   restaurantId: {
     type: sequelize.UUID,
-    allowNull: false
+    allowNull: false,
+    references: {
+      model: 'Restaurants',
+      key: 'restaurantId'
+    }
   }
 };
 

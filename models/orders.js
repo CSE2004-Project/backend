@@ -13,7 +13,11 @@ const schema = {
   },
   addressId: {
     type: sequelize.UUID,
-    allowNull: false
+    allowNull: false,
+    references: {
+      model: 'UserAddresses',
+      key: 'addressId'
+    }
   },
   orderDate: {
     type: sequelize.DATE,
@@ -21,11 +25,19 @@ const schema = {
   },
   userId: {
     type: sequelize.UUID,
-    allowNull: false
+    allowNull: false,
+    references: {
+      model: 'Users',
+      key: 'userId'
+    }
   },
   restaurantId: {
     type: sequelize.UUID,
-    allowNull: false
+    allowNull: false,
+    references: {
+      model: 'Restaurants',
+      key: 'restaurantId'
+    }
   },
   orderStatus: {
     type: sequelize.STRING(255),
@@ -41,7 +53,7 @@ const options = {
   timestamps: false
 };
 
-const order = db.define('order', schema, options);
+const order = db.define('Order', schema, options);
 
 order.sync({ alter: true })
   .then(() => {

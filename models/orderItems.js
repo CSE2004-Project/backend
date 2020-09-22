@@ -9,11 +9,19 @@ const schema = {
   },
   itemId: {
     type: sequelize.UUID,
-    allowNull: true
+    allowNull: true,
+    references: {
+      model: 'FoodItems',
+      key: 'itemId'
+    }
   },
   orderId: {
     type: sequelize.UUID,
-    allowNull: false
+    allowNull: false,
+    references: {
+      model: 'Orders',
+      key: 'orderId'
+    }
   },
   quantity: {
     type: sequelize.INTEGER(2),
@@ -25,7 +33,7 @@ const options = {
   timestamps: false
 };
 
-const orderItems = db.define('orderItems', schema, options);
+const orderItems = db.define('OrderItems', schema, options);
 
 orderItems.sync({ alter: true })
   .then(() => {

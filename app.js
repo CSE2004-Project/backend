@@ -31,7 +31,6 @@ require('./models/restaurant');
 require('./models/restaurantOwner');
 require('./models/user');
 require('./models/userAddress');
-require('./models/relations');
 
 // Logging
 app.use(morgan);

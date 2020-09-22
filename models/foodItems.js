@@ -9,7 +9,11 @@ const schema = {
   },
   restaurantId: {
     type: sequelize.UUID,
-    allowNull: false
+    allowNull: false,
+    references: {
+      model: 'Restaurants',
+      key: 'restaurantId'
+    }
   },
   itemName: {
     type: sequelize.STRING(255),
@@ -29,7 +33,7 @@ const options = {
   timestamps: false
 };
 
-const foodItems = db.define('foodItems', schema, options);
+const foodItems = db.define('FoodItems', schema, options);
 
 foodItems.sync({ alter: true })
   .then(() => {
