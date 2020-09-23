@@ -2,6 +2,8 @@ const User = require('../models/user');
 const UserAddress = require('../models/userAddress');
 // const Order = require('../models/orders');
 // const OrderItem = require('../models/orderItems');
+const Restaurant = require('../models/restaurant');
+const RestaurantOwner = require('../models/restaurantOwner');
 const bcrypt = require('bcryptjs');
 const uuid4 = require('uuid4');
 const logger = require('../logging/logger');
@@ -118,6 +120,91 @@ class UserController {
         error: false,
         message: 'Your address has been added successfully',
         code: 201
+      };
+    } catch (err) {
+      logger.error('An error occurred' + err);
+      return {
+        error: true,
+        message: 'An Error Occurred' + err,
+        code: 500
+      };
+    }
+  }
+
+  static async fetchDetails (userId) {
+    try {
+      const exist = await User.findOne({ where: { userId: userId } });
+      console.log(exist);
+      if (!exist) {
+        return {
+          error: true,
+          message: 'No such user found',
+          code: 404
+        };
+      }
+      return {
+        error: false,
+        message: 'User found',
+        code: 200,
+        userDetails: exist
+      };
+    } catch (err) {
+      logger.error('An error occurred' + err);
+      return {
+        error: true,
+        message: 'An Error Occurred' + err,
+        code: 500
+      };
+    }
+  }
+
+  static async fetchAddresses (userId) {
+    try {
+      const exist = await UserAddress.findAll({ where: { userId } });
+      if (!exist) {
+        return {
+          error: true,
+          message: 'No addresses found',
+          code: 404
+        };
+      }
+      return {
+        error: false,
+        message: 'Addresses for user found',
+        code: 200,
+        userAddresses: exist
+      };
+    } catch (err) {
+      logger.error('An error occurred' + err);
+      return {
+        error: true,
+        message: 'An Error Occurred' + err,
+        code: 500
+      };
+    }
+  }
+
+  static async updateDetails (userId, name, email, phone) {
+    try {
+      const filter = { where: { userId } };
+      const exist = await User.findOne();
+      if (!exist) {
+        return {
+          error: true,
+          message: 'No such user found',
+          code: 404
+        };
+      }
+      const query = {
+        name: name,
+        email: email,
+        phone: phone
+      };
+      await User.update(query, filter);
+      return {
+        error: false,
+        message: 'The details have been successfully updated',
+        code: 200
       };
     } catch (err) {
       logger.error('An error occurred' + err);
