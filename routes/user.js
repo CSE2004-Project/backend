@@ -35,4 +35,9 @@ router.post('/details/update', middlewares.isLoggedIn, async (req, res) => {
   res.status(response.code).send(response);
 });
 
+router.post('/order/place', middlewares.isLoggedIn, middlewares.isCustomer, async (req, res) => {
+  const response = await UserController.placeOrder(req.decoded.userId, req.body.addressId, req.body.restaurantId, req.body.items);
+  res.status(response.code).send(response);
+});
+
 module.exports = router;

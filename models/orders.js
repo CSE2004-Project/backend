@@ -17,7 +17,8 @@ const schema = {
   },
   orderDate: {
     type: sequelize.DATE,
-    allowNull: false
+    allowNull: false,
+    defaultValue: sequelize.fn('NOW')
   },
   userId: {
     type: sequelize.UUID,
@@ -37,7 +38,8 @@ const schema = {
   },
   orderStatus: {
     type: sequelize.STRING(255),
-    isIn: [['Pending', 'Delivered']]
+    isIn: [['Pending', 'Delivered']],
+    defaultValue: 'Pending'
   },
   deliveryBoyId: {
     type: sequelize.UUID,

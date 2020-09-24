@@ -1,7 +1,7 @@
 const User = require('../models/user');
 const UserAddress = require('../models/userAddress');
-// const Order = require('../models/orders');
-// const OrderItem = require('../models/orderItems');
+const Order = require('../models/orders');
+const OrderItem = require('../models/orderItems');
 // const Restaurant = require('../models/restaurant');
 // const RestaurantOwner = require('../models/restaurantOwner');
 const bcrypt = require('bcryptjs');
@@ -206,6 +206,45 @@ class UserController {
         message: 'The details have been successfully updated',
         code: 200
       };
+    } catch (err) {
+      logger.error('An error occurred' + err);
+      return {
+        error: true,
+        message: 'An Error Occurred' + err,
+        code: 500
+      };
+    }
+  }
+
+  static async placeOrder (userId, addressId, restaurantId, orderItems) {
+    try {
+      const deliveryBoys = await User.findAll({where:{role: 3}});
+      const selectedBoy = Math.floor((Math.random() * (deliveryBoys.length-1)));
+      const order = {
+        orderId: uuid4(),
+        userId: userId,
+        restaurantId: restaurantId,
+        addressId: addressId,
+        deliveryBoyId: deliveryBoys[selectedBoy].userId
+      }
+      await Order.create(order);
+      const items = [];
+      for(let i of orderItems){
+        const obj = {
+          orderItemId: uuid4(),
+          orderId: order.orderId,
+          itemId: i.itemId,
+          quantity: i.quantity
+        }
+        items.push(obj);
+      }
+      await OrderItem.bulkCreate(items,{validate: true});
+      return {
+        error: false,
+        message: 'Order Placed Successfully',
+        code: 201,
+        orderId: order.orderId
+      }
     } catch (err) {
       logger.error('An error occurred' + err);
       return {
