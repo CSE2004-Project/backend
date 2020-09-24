@@ -7,10 +7,6 @@ const schema = {
     type: sequelize.UUID,
     primaryKey: true
   },
-  orderTime: {
-    type: sequelize.TIME,
-    allowNull: false
-  },
   addressId: {
     type: sequelize.UUID,
     allowNull: false,
