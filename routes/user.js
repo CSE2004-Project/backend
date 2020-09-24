@@ -9,7 +9,7 @@ router.post('/register', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   const response = await UserController.login(req.body.email, req.body.password);
-  if(response.JWT){
+  if (response.JWT) {
     res.setHeader('Token', response.JWT);
   }
   res.status(response.code).send(response);

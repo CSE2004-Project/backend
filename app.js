@@ -38,7 +38,7 @@ app.use(morgan);
 
 // Import Routes
 const userRoutes = require('./routes/user');
-const restaurantRoutes = require('./routes/restaurant')
+const restaurantRoutes = require('./routes/restaurant');
 
 // Mount routes
 app.use('/', routes);
