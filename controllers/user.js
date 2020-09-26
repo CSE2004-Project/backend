@@ -3,7 +3,7 @@ const UserAddress = require('../models/userAddress');
 const Order = require('../models/orders');
 const OrderItem = require('../models/orderItems');
 const Restaurant = require('../models/restaurant');
-// const FoodItem = require('../models/foodItems');
+const FoodItem = require('../models/foodItems');
 const bcrypt = require('bcryptjs');
 const uuid4 = require('uuid4');
 const logger = require('../logging/logger');
@@ -309,7 +309,7 @@ class UserController {
         where: {
           userId
         },
-        include: [UserAddress, OrderItem, Restaurant]
+        include: [UserAddress, OrderItem, Restaurant, { model: OrderItem, include: [FoodItem] }]
       };
       const orders = await Order.findAll(filter);
       if (orders.length === 0) {
@@ -341,15 +341,15 @@ class UserController {
         where: {
           orderId
         },
-        include: [{ all: true }]
+        include: [{ all: true }, { model: OrderItem, include: [FoodItem] }]
       };
       const order = await Order.findOne(orderFilter);
-      if(order.userId!==userId){
+      if (order.userId !== userId) {
         return {
           error: true,
           message: 'The given order was not placed by you',
           code: 401
-        }
+        };
       }
       return {
         error: false,
@@ -374,7 +374,7 @@ class UserController {
           userId: userId,
           orderStatus: 'Pending'
         },
-        include: [UserAddress, OrderItem, Restaurant]
+        include: [UserAddress, OrderItem, Restaurant, { model: OrderItem, include: [FoodItem] }]
       };
       const orders = await Order.findAll(filter);
       if (orders.length === 0) {
@@ -407,7 +407,7 @@ class UserController {
           userId: userId,
           orderStatus: 'Delivered'
         },
-        include: [UserAddress, OrderItem, Restaurant]
+        include: [UserAddress, OrderItem, Restaurant, { model: OrderItem, include: [FoodItem] }]
       };
       const orders = await Order.findAll(filter);
       if (orders.length === 0) {
