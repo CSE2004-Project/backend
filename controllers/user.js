@@ -344,7 +344,7 @@ class UserController {
         include: [{ all: true }, { model: OrderItem, include: [FoodItem] }]
       };
       const order = await Order.findOne(orderFilter);
-      if(!order){
+      if (!order) {
         return {
           error: true,
           message: 'No such order exists',
