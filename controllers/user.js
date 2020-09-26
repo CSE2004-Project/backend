@@ -2,8 +2,8 @@ const User = require('../models/user');
 const UserAddress = require('../models/userAddress');
 const Order = require('../models/orders');
 const OrderItem = require('../models/orderItems');
-// const Restaurant = require('../models/restaurant');
-// const RestaurantOwner = require('../models/restaurantOwner');
+const Restaurant = require('../models/restaurant');
+const FoodItem = require('../models/foodItems');
 const bcrypt = require('bcryptjs');
 const uuid4 = require('uuid4');
 const logger = require('../logging/logger');
@@ -218,8 +218,8 @@ class UserController {
 
   static async placeOrder (userId, addressId, restaurantId, orderItems, total) {
     try {
-      const deliveryBoys = await User.findAll({where:{role: 3}});
-      const selectedBoy = Math.floor((Math.random() * (deliveryBoys.length-1)));
+      const deliveryBoys = await User.findAll({ where: { role: 3 } });
+      const selectedBoy = Math.floor((Math.random() * (deliveryBoys.length - 1)));
       const order = {
         orderId: uuid4(),
         userId: userId,
@@ -227,26 +227,142 @@ class UserController {
         addressId: addressId,
         deliveryBoyId: deliveryBoys[selectedBoy].userId,
         total: total
-      }
+      };
       await Order.create(order);
       const items = [];
-      for(let i of orderItems){
+      for (const i of orderItems) {
         const obj = {
           orderItemId: uuid4(),
           orderId: order.orderId,
           itemId: i.itemId,
           quantity: i.quantity
-        }
+        };
         items.push(obj);
       }
-      await OrderItem.bulkCreate(items,{validate: true});
+      await OrderItem.bulkCreate(items, { validate: true });
       return {
         error: false,
         message: 'Order Placed Successfully',
         code: 201,
         orderId: order.orderId
-      }
+      };
     } catch (err) {
+      logger.error('An error occurred' + err);
+      return {
+        error: true,
+        message: 'An Error Occurred' + err,
+        code: 500
+      };
+    }
+  }
+
+  static async deliverOrder (userId, orderId) {
+    try {
+      const filter = {
+        where: {
+          orderId
+        }
+      };
+      const order = await Order.findOne(filter);
+      if (!order) {
+        return {
+          error: true,
+          message: 'No such order found',
+          code: 404
+        };
+      }
+      if (order.deliveryBoyId !== userId) {
+        return {
+          error: true,
+          message: 'You are not assigned to deliver this order',
+          code: 401
+        };
+      }
+      if (order.orderStatus === 'Delivered') {
+        return {
+          error: true,
+          message: 'This order is already delivered',
+          code: 409
+        };
+      }
+      const query = {
+        orderStatus: 'Delivered'
+      };
+      await Order.update(query, filter);
+      return {
+        error: false,
+        message: 'Order Successfully Delivered',
+        code: 200
+      };
+    } catch (err) {
+      logger.error('An error occurred' + err);
+      return {
+        error: true,
+        message: 'An Error Occurred' + err,
+        code: 500
+      };
+    }
+  }
+
+  static async fetchOrders (userId) {
+    try {
+      const filter = {
+        where: {
+          userId
+        },
+        include: [Restaurant]
+      };
+      const orders = await Order.findAll(filter);
+      if (orders.length === 0) {
+        return {
+          error: false,
+          message: 'You have not placed any orders yet',
+          code: 200
+        };
+      }
+      return {
+        error: false,
+        message: 'Orders have been retrieved successfully',
+        code: 200,
+        orders: orders
+      };
+    } catch (err) {
+      logger.error('An error occurred' + err);
+      return {
+        error: true,
+        message: 'An Error Occurred' + err,
+        code: 500
+      };
+    }
+  }
+
+  static async fetchOrderDetails (orderId) {
+    try {
+      const orderFilter = {
+        where: {
+          orderId
+        },
+        include: [Restaurant]
+      };
+      const order = await Order.findOne(orderFilter)
+      const filter = {
+        where: {
+          orderId
+        },
+        include: [FoodItem]
+      }
+      const items = await OrderItem.findAll(filter)
+      const orderDetails = {
+        orderDetail: order,
+        orderItems: items
+      }
+      return {
+        error: false,
+        message: 'Order Details Fetched',
+        code: 200,
+        orderDetails: orderDetails
+      }
+    } catch(err) {
       logger.error('An error occurred' + err);
       return {
         error: true,

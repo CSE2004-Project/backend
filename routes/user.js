@@ -40,4 +40,19 @@ router.post('/order/place', middlewares.isLoggedIn, middlewares.isCustomer, asyn
   res.status(response.code).send(response);
 });
 
+router.post('/deliveryBoy/deliver', middlewares.isLoggedIn, middlewares.isDeliveryBoy, async (req, res) => {
+  const response = await UserController.deliverOrder(req.decoded.userId, req.body.orderId);
+  res.status(response.code).send(response);
+});
+
+router.get('/orders/fetch/all', middlewares.isLoggedIn, middlewares.isCustomer, async (req, res) => {
+  const response = await UserController.fetchOrders(req.decoded.userId);
+  res.status(response.code).send(response);
+});
+
+router.get('/orders/fetch', middlewares.isLoggedIn, middlewares.isCustomer, async (req, res) => {
+  const response = await UserController.fetchOrderDetails(req.query.orderId);
+  res.status(response.code).send(response);
+});
+
 module.exports = router;

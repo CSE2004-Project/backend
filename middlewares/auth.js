@@ -89,3 +89,35 @@ exports.isOwner = async (req, res, next) => {
     return res.status(response.code).send(response);
   }
 };
+
+exports.isDeliveryBoy = async (req, res, next) => {
+  try {
+    const details = await User.findOne({ where: { userId: req.decoded.userId } });
+    if (!details) {
+      const response = {
+        error: true,
+        message: 'This user does not exist',
+        code: '404'
+      };
+      return res.status(response.code).send(response);
+    }
+    if (details.role !== 3) {
+      const response = {
+        error: true,
+        message: 'Unauthorized Access: Not Allowed',
+        code: '403'
+      };
+      return res.status(response.code).send(response);
+    } else {
+      next();
+    }
+  } catch (err) {
+    logger.error('An error occurred' + err);
+    const response = {
+      error: true,
+      message: 'An error occurred' + err,
+      code: '404'
+    };
+    return res.status(response.code).send(response);
+  }
+};
