@@ -216,7 +216,7 @@ class UserController {
     }
   }
 
-  static async placeOrder (userId, addressId, restaurantId, orderItems) {
+  static async placeOrder (userId, addressId, restaurantId, orderItems, total) {
     try {
       const deliveryBoys = await User.findAll({where:{role: 3}});
       const selectedBoy = Math.floor((Math.random() * (deliveryBoys.length-1)));
@@ -225,7 +225,8 @@ class UserController {
         userId: userId,
         restaurantId: restaurantId,
         addressId: addressId,
-        deliveryBoyId: deliveryBoys[selectedBoy].userId
+        deliveryBoyId: deliveryBoys[selectedBoy].userId,
+        total: total
       }
       await Order.create(order);
       const items = [];
