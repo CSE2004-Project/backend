@@ -55,4 +55,13 @@ router.get('/orders/fetch', middlewares.isLoggedIn, middlewares.isCustomer, asyn
   res.status(response.code).send(response);
 });
 
+router.get('/orders/fetch/pending', middlewares.isLoggedIn, middlewares.isCustomer, async (req, res) => {
+  const response = await UserController.fetchOrdersPending(req.decoded.userId, req.query.orderId);
+  res.status(response.code).send(response);
+});
+
+router.get('/orders/fetch/delivered', middlewares.isLoggedIn, middlewares.isCustomer, async (req, res) => {
+  const response = await UserController.fetchOrdersDelivered(req.decoded.userId, req.query.orderId);
+  res.status(response.code).send(response);
+});
 module.exports = router;

@@ -366,6 +366,72 @@ class UserController {
       };
     }
   }
+
+  static async fetchOrdersPending (userId) {
+    try {
+      const filter = {
+        where: {
+          userId: userId,
+          orderStatus: 'Pending'
+        },
+        include: [UserAddress, OrderItem, Restaurant]
+      };
+      const orders = await Order.findAll(filter);
+      if (orders.length === 0) {
+        return {
+          error: false,
+          message: 'You do not have any pending orders',
+          code: 200
+        };
+      }
+      return {
+        error: false,
+        message: 'Orders have been retrieved successfully',
+        code: 200,
+        orders: orders
+      };
+    } catch (err) {
+      logger.error('An error occurred' + err);
+      return {
+        error: true,
+        message: 'An Error Occurred' + err,
+        code: 500
+      };
+    }
+  }
+
+  static async fetchOrdersDelivered (userId) {
+    try {
+      const filter = {
+        where: {
+          userId: userId,
+          orderStatus: 'Delivered'
+        },
+        include: [UserAddress, OrderItem, Restaurant]
+      };
+      const orders = await Order.findAll(filter);
+      if (orders.length === 0) {
+        return {
+          error: false,
+          message: 'You do not have any delivered orders',
+          code: 200
+        };
+      }
+      return {
+        error: false,
+        message: 'Orders have been retrieved successfully',
+        code: 200,
+        orders: orders
+      };
+    } catch (err) {
+      logger.error('An error occurred' + err);
+      return {
+        error: true,
+        message: 'An Error Occurred' + err,
+        code: 500
+      };
+    }
+  }
 }
 
 module.exports = UserController;
