@@ -44,6 +44,10 @@ const schema = {
   deliveryBoyId: {
     type: sequelize.UUID,
     allowNull: false
+  },
+  total: {
+    type: sequelize.STRING,
+    allowNull: true
   }
 };
 
