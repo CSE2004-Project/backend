@@ -2,7 +2,7 @@ const User = require('../models/user');
 const UserAddress = require('../models/userAddress');
 const Order = require('../models/orders');
 const OrderItem = require('../models/orderItems');
-// const Restaurant = require('../models/restaurant');
+const Restaurant = require('../models/restaurant');
 // const FoodItem = require('../models/foodItems');
 const bcrypt = require('bcryptjs');
 const uuid4 = require('uuid4');
@@ -309,7 +309,7 @@ class UserController {
         where: {
           userId
         },
-        include: [{ all: true }]
+        include: [UserAddress, OrderItem, Restaurant]
       };
       const orders = await Order.findAll(filter);
       if (orders.length === 0) {
