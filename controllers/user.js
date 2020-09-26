@@ -335,7 +335,7 @@ class UserController {
     }
   }
 
-  static async fetchOrderDetails (orderId) {
+  static async fetchOrderDetails (userId, orderId) {
     try {
       const orderFilter = {
         where: {
@@ -344,6 +344,13 @@ class UserController {
         include: [{ all: true }]
       };
       const order = await Order.findOne(orderFilter);
+      if(order.userId!==userId){
+        return {
+          error: true,
+          message: 'The given order was not placed by you',
+          code: 401
+        }
+      }
       return {
         error: false,
         message: 'Order Details Fetched',

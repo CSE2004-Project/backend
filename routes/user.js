@@ -51,7 +51,7 @@ router.get('/orders/fetch/all', middlewares.isLoggedIn, middlewares.isCustomer, 
 });
 
 router.get('/orders/fetch', middlewares.isLoggedIn, middlewares.isCustomer, async (req, res) => {
-  const response = await UserController.fetchOrderDetails(req.query.orderId);
+  const response = await UserController.fetchOrderDetails(req.decoded.userId, req.query.orderId);
   res.status(response.code).send(response);
 });
 
