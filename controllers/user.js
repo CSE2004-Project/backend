@@ -133,7 +133,7 @@ class UserController {
 
   static async fetchDetails (userId) {
     try {
-      const exist = await User.findOne({ where: { userId: userId } , include: [{all:true}]});
+      const exist = await User.findOne({ where: { userId: userId }, include: [{ all: true }] });
       if (!exist) {
         return {
           error: true,
@@ -309,7 +309,7 @@ class UserController {
         where: {
           userId
         },
-        include: [{all:true}]
+        include: [{ all: true }]
       };
       const orders = await Order.findAll(filter);
       if (orders.length === 0) {
@@ -341,16 +341,16 @@ class UserController {
         where: {
           orderId
         },
-        include: [{all:true}]
+        include: [{ all: true }]
       };
-      const order = await Order.findOne(orderFilter)
+      const order = await Order.findOne(orderFilter);
       return {
         error: false,
         message: 'Order Details Fetched',
         code: 200,
         orderDetails: order
-      }
-    } catch(err) {
+      };
+    } catch (err) {
       logger.error('An error occurred' + err);
       return {
         error: true,

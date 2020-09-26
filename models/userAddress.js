@@ -41,7 +41,7 @@ const options = {
   timestamps: false
 };
 
-const userAddress = db.define('UserAddress', schema, options);
+const userAddress = db.define('UserAddresses', schema, options);
 
 userAddress.sync({ alter: true })
   .then(() => {

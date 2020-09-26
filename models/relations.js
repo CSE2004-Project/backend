@@ -14,9 +14,10 @@ restaurant.hasOne(restaurantOwner, { foreignKey: 'restaurantId' });
 restaurant.hasMany(foodItems, { foreignKey: 'restaurantId' });
 restaurant.hasMany(orders, { foreignKey: 'restaurantId' });
 
-orders.hasOne(userAddress, { foreignKey: 'addressId' });
+orders.belongsTo(userAddress, { foreignKey: 'addressId' });
 orders.hasMany(orderItems, { foreignKey: 'orderId' });
-orders.belongsTo(restaurant, {foreignKey: 'restaurantId'})
+orders.belongsTo(restaurant, { foreignKey: 'restaurantId' });
+orders.belongsTo(user, { foreignKey: 'userId' });
 
 foodItems.hasMany(orderItems, { foreignKey: 'itemId' });
-orderItems.belongsTo(foodItems, {foreignKey: 'itemId'});
+orderItems.belongsTo(foodItems, { foreignKey: 'itemId' });
