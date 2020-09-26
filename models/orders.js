@@ -47,7 +47,7 @@ const schema = {
   },
   total: {
     type: sequelize.STRING,
-    allowNull: true
+    allowNull: false
   }
 };
 
