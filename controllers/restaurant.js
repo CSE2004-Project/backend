@@ -109,7 +109,7 @@ class RestaurantController {
 
   static async fetchItems (restaurantId) {
     try {
-      const exists = await Restaurant.findOne({ where: { restaurantId: restaurantId } });
+      const exists = await Restaurant.findOne({ where: { restaurantId: restaurantId }, include: [FoodItem] });
       if (!exists) {
         return {
           error: true,
@@ -117,7 +117,7 @@ class RestaurantController {
           code: 404
         };
       }
-      const items = await FoodItem.findAll({ where: { restaurantId: restaurantId } });
+      const items = exists["FoodItems"];
       if (!items) {
         return {
           error: true,
