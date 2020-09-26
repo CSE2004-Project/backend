@@ -133,8 +133,7 @@ class UserController {
 
   static async fetchDetails (userId) {
     try {
-      const exist = await User.findOne({ where: { userId: userId } });
-      console.log(exist);
+      const exist = await User.findOne({ where: { userId: userId } , include: [{all:true}]});
       if (!exist) {
         return {
           error: true,
