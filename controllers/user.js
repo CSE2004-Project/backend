@@ -2,8 +2,8 @@ const User = require('../models/user');
 const UserAddress = require('../models/userAddress');
 const Order = require('../models/orders');
 const OrderItem = require('../models/orderItems');
-const Restaurant = require('../models/restaurant');
-const FoodItem = require('../models/foodItems');
+// const Restaurant = require('../models/restaurant');
+// const FoodItem = require('../models/foodItems');
 const bcrypt = require('bcryptjs');
 const uuid4 = require('uuid4');
 const logger = require('../logging/logger');
@@ -310,7 +310,7 @@ class UserController {
         where: {
           userId
         },
-        include: [Restaurant]
+        include: [{all:true}]
       };
       const orders = await Order.findAll(filter);
       if (orders.length === 0) {
@@ -342,25 +342,14 @@ class UserController {
         where: {
           orderId
         },
-        include: [Restaurant]
+        include: [{all:true}]
       };
       const order = await Order.findOne(orderFilter)
-      const filter = {
-        where: {
-          orderId
-        },
-        include: [FoodItem]
-      }
-      const items = await OrderItem.findAll(filter)
-      const orderDetails = {
-        orderDetail: order,
-        orderItems: items
-      }
       return {
         error: false,
         message: 'Order Details Fetched',
         code: 200,
-        orderDetails: orderDetails
+        orderDetails: order
       }
     } catch(err) {
       logger.error('An error occurred' + err);
