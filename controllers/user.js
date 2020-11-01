@@ -197,7 +197,7 @@ class UserController {
       const query = {
         name: name,
         email: email,
-        phone: phone
+        phoneNumber: phone
       };
       await User.update(query, filter);
       return {

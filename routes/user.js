@@ -31,7 +31,7 @@ router.get('/details/fetch', middlewares.isLoggedIn, async (req, res) => {
 });
 
 router.post('/details/update', middlewares.isLoggedIn, async (req, res) => {
-  const response = await UserController.updateDetails(req.decoded.userId, req.body.name, req.body.email, req.body.phone);
+  const response = await UserController.updateDetails(req.decoded.userId, req.body.name, req.body.email, req.body.phoneNumber);
   res.status(response.code).send(response);
 });
 
