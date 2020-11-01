@@ -90,7 +90,8 @@ class RestaurantController {
         };
       }
       const city = address.city;
-      const restaurants = await Restaurant.findAll({ where: { city: city } });
+      // const restaurants = await Restaurant.findAll({ where: { city: city } });
+      const restaurants = await Restaurant.findAll({});
       return {
         error: false,
         message: 'Restaurants Fetched',
