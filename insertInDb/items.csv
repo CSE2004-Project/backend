@@ -1,0 +1,16 @@
+itemID,itemName,itemDesc,Price,restaurantID
+2a72a16b-4447-4ae4-b650-16df50888abc,Paneer Butter Masal,Indian dish of marinated paneer cheese served in a spiced gravy,249,21dbe9a4-78b7-466b-bb70-68118f10f5e6
+80cd9106-1583-46f7-a082-9405ef845507,Baked Macaroni ,Macroni Baked with loads of cheese in a sweet white sauce,299,18e5f47b-0cec-40eb-a928-2a427e360013
+31e0ff89-d9d7-4db6-a8f9-cb24684c1e79,Lasagna,Italian dish made of stacked layers of thin flat pasta alternating with fillings,349,22d9792a-9026-404c-8acc-666912b2dac7
+fd4ba41c-a8e2-4c6f-b6b0-c997d80a3d51,Bruschetta,grilled bread rubbed with garlic and topped with olive oil and salt,299,6ea3ff9d-f91e-4cb6-b60d-e6b02edd280e
+be3631c6-0d9f-4853-bb6b-e85442dfbd00,Hakka Noodles,"stir fried noodles, veggies and sauces",299,687ec862-115d-43da-a1a9-2ddcd1853380
+83790e7e-93d9-4b12-be28-795f8b6ec274,Tandoori Paneer Sandwich,Grilled sandwich with tandoori sauce and paneer,179,2e575ea2-3144-4dd2-b4ba-103fda7fe4ea
+0a13fdad-a238-46e9-a272-0372020ff6ed,Paneer Chilly Dry,"Paneer chunks sauteed well spices, chillies, onion, capsicum and soy sauce",319,41305dca-c6a2-42a4-9108-15c56e583f3f
+fa3efbf7-080b-4b6d-87e0-cdf6e2e5681c,Veg Manchurian,Classic Chinese dish,299,c0bf734a-706e-4d0c-997b-a8c6f4977cbe
+da2f2e82-0aed-4dfc-845a-5127aeb38669,Maha Burger,"A triple layer, triple sauce burger",199,84b835e0-2e44-4efb-8e70-7f96ca882cd5
+961737a6-b873-49c8-96c0-b0f20df1e7d8,Farmhouse Pizza,"onions, olives, mushrooms, golden corn",399,ec5a4a18-beb6-426e-9932-2c282bbdf23f
+d3978246-811f-47e7-b86c-f541222b89ac,Tacos,traditional Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling,249,326b42f2-ffd5-44fa-8505-d4361918022e
+8fead32a-d52b-49c7-be8b-9fe8632a4fea,Choco Lava Cake,combination of the elements of a chocolate cake and a soufflé,99,d5413b31-c501-4005-b3b4-fc6245a938c0
+190fe31f-cb5f-48c7-bb05-c01df0fd5876,Supreme Garlic Bread,"cheesy garlic bread topped with golden corn, onions and tomato",149,d2dd7d84-8c06-49e3-86fc-4cdf3d8fe082
+b04b6a45-74c3-477b-9a6a-c2e3b374d4f3,Pasta Arrabiata,"pasta made with spicy sauce containing garlic, tomatoes, and dried red chili peppers cooked in olive oil.",249,d2dd7d84-8c06-49e3-86fc-4cdf3d8fe082
+e6737d98-08f0-4cdb-9659-0d2a5fee5d5f,Hummus,"A classic lebanese dip, spread, or savory dish made from cooked, mashed chickpeas blended with tahini, lemon juice, and garlic",319,d5413b31-c501-4005-b3b4-fc6245a938c0
