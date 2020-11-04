@@ -18,12 +18,12 @@ let csvStream = fastcsv
       host: "localhost",
       user: "postgres",
       database: "dbms_project",
-      password: "<password>",
+      password: "password",
       port: 5432
     });
 
     const query =
-      "INSERT INTO restaurant (restaurantId, restaurantName, addressLine1, addressLine2, state, city, pincode) VALUES ($1, $2, $3, $4, $5, $6, $7)";
+      "INSERT INTO public.\"Restaurants\" (\"restaurantId\", \"restaurantName\", \"addressLine1\", \"addressLine2\", \"state\", \"city\", \"pinCode\") VALUES ($1, $2, $3, $4, $5, $6, $7)";
 
     pool.connect((err, client, done) => {
       if (err) throw err;
