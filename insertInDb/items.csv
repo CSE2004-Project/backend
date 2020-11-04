@@ -1,16 +1,66 @@
-itemID,itemName,itemDesc,Price,restaurantID
-2a72a16b-4447-4ae4-b650-16df50888abc,Paneer Butter Masal,Indian dish of marinated paneer cheese served in a spiced gravy,249,21dbe9a4-78b7-466b-bb70-68118f10f5e6
-80cd9106-1583-46f7-a082-9405ef845507,Baked Macaroni ,Macroni Baked with loads of cheese in a sweet white sauce,299,18e5f47b-0cec-40eb-a928-2a427e360013
-31e0ff89-d9d7-4db6-a8f9-cb24684c1e79,Lasagna,Italian dish made of stacked layers of thin flat pasta alternating with fillings,349,22d9792a-9026-404c-8acc-666912b2dac7
-fd4ba41c-a8e2-4c6f-b6b0-c997d80a3d51,Bruschetta,grilled bread rubbed with garlic and topped with olive oil and salt,299,6ea3ff9d-f91e-4cb6-b60d-e6b02edd280e
-be3631c6-0d9f-4853-bb6b-e85442dfbd00,Hakka Noodles,"stir fried noodles, veggies and sauces",299,687ec862-115d-43da-a1a9-2ddcd1853380
-83790e7e-93d9-4b12-be28-795f8b6ec274,Tandoori Paneer Sandwich,Grilled sandwich with tandoori sauce and paneer,179,2e575ea2-3144-4dd2-b4ba-103fda7fe4ea
-0a13fdad-a238-46e9-a272-0372020ff6ed,Paneer Chilly Dry,"Paneer chunks sauteed well spices, chillies, onion, capsicum and soy sauce",319,41305dca-c6a2-42a4-9108-15c56e583f3f
-fa3efbf7-080b-4b6d-87e0-cdf6e2e5681c,Veg Manchurian,Classic Chinese dish,299,c0bf734a-706e-4d0c-997b-a8c6f4977cbe
-da2f2e82-0aed-4dfc-845a-5127aeb38669,Maha Burger,"A triple layer, triple sauce burger",199,84b835e0-2e44-4efb-8e70-7f96ca882cd5
-961737a6-b873-49c8-96c0-b0f20df1e7d8,Farmhouse Pizza,"onions, olives, mushrooms, golden corn",399,ec5a4a18-beb6-426e-9932-2c282bbdf23f
-d3978246-811f-47e7-b86c-f541222b89ac,Tacos,traditional Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling,249,326b42f2-ffd5-44fa-8505-d4361918022e
-8fead32a-d52b-49c7-be8b-9fe8632a4fea,Choco Lava Cake,combination of the elements of a chocolate cake and a soufflé,99,d5413b31-c501-4005-b3b4-fc6245a938c0
-190fe31f-cb5f-48c7-bb05-c01df0fd5876,Supreme Garlic Bread,"cheesy garlic bread topped with golden corn, onions and tomato",149,d2dd7d84-8c06-49e3-86fc-4cdf3d8fe082
-b04b6a45-74c3-477b-9a6a-c2e3b374d4f3,Pasta Arrabiata,"pasta made with spicy sauce containing garlic, tomatoes, and dried red chili peppers cooked in olive oil.",249,d2dd7d84-8c06-49e3-86fc-4cdf3d8fe082
-e6737d98-08f0-4cdb-9659-0d2a5fee5d5f,Hummus,"A classic lebanese dip, spread, or savory dish made from cooked, mashed chickpeas blended with tahini, lemon juice, and garlic",319,d5413b31-c501-4005-b3b4-fc6245a938c0
+itemID,itemName,itemDesc,Price,restaurantID,,,,
+4c55eba4-9f67-4295-b2e8-8a4b0d226307,Paneer Butter Masal,Indian dish of marinated paneer cheese served in a spiced gravy,249,21dbe9a4-78b7-466b-bb70-68118f10f5e6,,,,
+5ae83601-6be2-4a84-ae5b-59a205db2c6f,Baked Macaroni ,Macroni Baked with loads of cheese in a sweet white sauce,299,21dbe9a4-78b7-466b-bb70-68118f10f5e6,,,,
+d7e46393-7924-47b9-a449-6df59cd36b39,Lasagna,Italian dish made of stacked layers of thin flat pasta alternating with fillings,349,21dbe9a4-78b7-466b-bb70-68118f10f5e6,,,,
+48550093-2814-4512-b0be-943965f37ffc,Bruschetta,grilled bread rubbed with garlic and topped with olive oil and salt,299,21dbe9a4-78b7-466b-bb70-68118f10f5e6,,,,
+d152cc72-ee5e-4975-9acc-69dff4413aa6,Hakka Noodles,"stir fried noodles, veggies and sauces",299,21dbe9a4-78b7-466b-bb70-68118f10f5e6,,,,
+943c1e23-79ca-4a42-9dcd-278b0a598b3c,Tandoori Paneer Sandwich,Grilled sandwich with tandoori sauce and paneer,179,18e5f47b-0cec-40eb-a928-2a427e360013,,,,
+c4fbd1c9-163c-4a63-9121-f1129cd37cbc,Paneer Chilly Dry,"Paneer chunks sauteed well spices, chillies, onion, capsicum and soy sauce",319,18e5f47b-0cec-40eb-a928-2a427e360013,,,,
+274ec114-e6eb-446d-9c9a-ca486a8e5b8c,Veg Manchurian,Classic Chinese dish,299,18e5f47b-0cec-40eb-a928-2a427e360013,,,,
+403d4ea7-18b9-4d8e-913e-a600c9ccaa04,Maha Burger,"A triple layer, triple sauce burger",199,18e5f47b-0cec-40eb-a928-2a427e360013,,,,
+46d66215-c056-4fb0-b817-656fa44785f4,Farmhouse Pizza,"onions, olives, mushrooms, golden corn",399,18e5f47b-0cec-40eb-a928-2a427e360013,,,,
+04f610a2-9e50-4d06-96c0-4d06f3455e6a,Tacos,traditional Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling,249,22d9792a-9026-404c-8acc-666912b2dac7,,,,
+82881ddd-7575-45ad-b262-230bd5c59314,Choco Lava Cake,combination of the elements of a chocolate cake and a soufflé,99,22d9792a-9026-404c-8acc-666912b2dac7,,,,
+15a3be32-7523-45e9-8cf9-282eb0520476,Supreme Garlic Bread,"cheesy garlic bread topped with golden corn, onions and tomato",149,22d9792a-9026-404c-8acc-666912b2dac7,,,,
+21218553-c800-4aa4-bb6d-b21c54aac922,Pasta Arrabiata,"pasta made with spicy sauce containing garlic, tomatoes, and dried red chili peppers cooked in olive oil.",249,22d9792a-9026-404c-8acc-666912b2dac7,,,,
+8c610821-27a3-43b8-a241-975974342fd4,Hummus,"A classic lebanese dip, spread, or savory dish made from cooked, mashed chickpeas blended with tahini, lemon juice, and garlic",319,22d9792a-9026-404c-8acc-666912b2dac7,,,,
+9419a97a-b585-4fd8-9100-3baf8e8f5754,Paneer Butter Masal,Indian dish of marinated paneer cheese served in a spiced gravy,249,6ea3ff9d-f91e-4cb6-b60d-e6b02edd280e,,,,
+dd2a8b34-a560-46b0-b779-4fd002190d26,Baked Macaroni ,Macroni Baked with loads of cheese in a sweet white sauce,299,6ea3ff9d-f91e-4cb6-b60d-e6b02edd280e,,,,
+0e245e31-7560-47d8-af72-53d4e8959ba9,Lasagna,Italian dish made of stacked layers of thin flat pasta alternating with fillings,349,6ea3ff9d-f91e-4cb6-b60d-e6b02edd280e,,,,
+8b1d9c34-e370-4eaa-acf2-7b785db75186,Bruschetta,grilled bread rubbed with garlic and topped with olive oil and salt,299,6ea3ff9d-f91e-4cb6-b60d-e6b02edd280e,,,,
+af546441-0936-4c6b-a881-7b1b2fa9f147,Hakka Noodles,"stir fried noodles, veggies and sauces",299,6ea3ff9d-f91e-4cb6-b60d-e6b02edd280e,,,,
+abc75444-1e52-4727-83df-98fba2634089,Tandoori Paneer Sandwich,Grilled sandwich with tandoori sauce and paneer,179,687ec862-115d-43da-a1a9-2ddcd1853380,,,,
+95a59fc2-c616-4606-8c9a-fb9d7ba28bfd,Paneer Chilly Dry,"Paneer chunks sauteed well spices, chillies, onion, capsicum and soy sauce",319,687ec862-115d-43da-a1a9-2ddcd1853380,,,,
+3b6d8384-ff75-4bae-8f9e-53ad9e09f968,Veg Manchurian,Classic Chinese dish,299,687ec862-115d-43da-a1a9-2ddcd1853380,,,,
+e8dd5ed3-7428-42a5-8177-ebb73a6a7622,Maha Burger,"A triple layer, triple sauce burger",199,687ec862-115d-43da-a1a9-2ddcd1853380,,,,
+4170d9d9-1a21-4552-bcdf-9616c4ab475a,Farmhouse Pizza,"onions, olives, mushrooms, golden corn",399,687ec862-115d-43da-a1a9-2ddcd1853380,,,,
+75e2917a-051b-4517-8ffa-6cb7a68e6dfe,Tacos,traditional Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling,249,2e575ea2-3144-4dd2-b4ba-103fda7fe4ea,,,,
+951b73b9-875a-4164-b428-6060cfa9d511,Choco Lava Cake,combination of the elements of a chocolate cake and a soufflé,99,2e575ea2-3144-4dd2-b4ba-103fda7fe4ea,,,,
+46e95195-4ec9-489d-ab26-db1a0e77f985,Supreme Garlic Bread,"cheesy garlic bread topped with golden corn, onions and tomato",149,2e575ea2-3144-4dd2-b4ba-103fda7fe4ea,,,,
+5288a08b-0f09-4d48-a983-0baf4ae896cd,Pasta Arrabiata,"pasta made with spicy sauce containing garlic, tomatoes, and dried red chili peppers cooked in olive oil.",249,2e575ea2-3144-4dd2-b4ba-103fda7fe4ea,,,,
+2c8b875b-687f-4450-9c9b-d9e300b6130a,Hummus,"A classic lebanese dip, spread, or savory dish made from cooked, mashed chickpeas blended with tahini, lemon juice, and garlic",319,2e575ea2-3144-4dd2-b4ba-103fda7fe4ea,,,,
+f6cde9a6-cc3f-4af4-b032-46b331d332a6,Paneer Butter Masal,Indian dish of marinated paneer cheese served in a spiced gravy,249,41305dca-c6a2-42a4-9108-15c56e583f3f,,,,
+b9d92181-0f73-4f46-beff-03d2639ab8d6,Baked Macaroni ,Macroni Baked with loads of cheese in a sweet white sauce,299,41305dca-c6a2-42a4-9108-15c56e583f3f,,,,
+bd4e885c-4dd4-4fa3-94e7-f8a673076896,Lasagna,Italian dish made of stacked layers of thin flat pasta alternating with fillings,349,41305dca-c6a2-42a4-9108-15c56e583f3f,,,,
+80a00508-1d21-4b9c-b8f3-9dda1ba491ce,Bruschetta,grilled bread rubbed with garlic and topped with olive oil and salt,299,41305dca-c6a2-42a4-9108-15c56e583f3f,,,,
+cbcd152a-88a6-4451-baa1-66cdd42f6e4a,Hakka Noodles,"stir fried noodles, veggies and sauces",299,41305dca-c6a2-42a4-9108-15c56e583f3f,,,,
+75e0e28a-c194-4c4e-94ee-f500f9a3cf4a,Tandoori Paneer Sandwich,Grilled sandwich with tandoori sauce and paneer,179,c0bf734a-706e-4d0c-997b-a8c6f4977cbe,,,,
+546511c2-418b-4dd0-89c0-8b60106d270e,Paneer Chilly Dry,"Paneer chunks sauteed well spices, chillies, onion, capsicum and soy sauce",319,c0bf734a-706e-4d0c-997b-a8c6f4977cbe,,,,
+8aac6b2d-26c8-44ee-a861-63fe4ce3a8b6,Veg Manchurian,Classic Chinese dish,299,c0bf734a-706e-4d0c-997b-a8c6f4977cbe,,,,
+05ea1b8e-8948-4fac-aa88-9fba3b9b0e61,Maha Burger,"A triple layer, triple sauce burger",199,c0bf734a-706e-4d0c-997b-a8c6f4977cbe,,,,
+cfbc087c-9f98-4eb6-8f67-5af983aa3f7e,Farmhouse Pizza,"onions, olives, mushrooms, golden corn",399,c0bf734a-706e-4d0c-997b-a8c6f4977cbe,,,,
+e6659079-6634-4ad1-924a-cc56f33a0fd9,Tacos,traditional Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling,249,84b835e0-2e44-4efb-8e70-7f96ca882cd5,,,,
+5e298f2d-4c34-4404-868c-85cd42b36f73,Choco Lava Cake,combination of the elements of a chocolate cake and a soufflé,99,84b835e0-2e44-4efb-8e70-7f96ca882cd5,,,,
+2ecaedd7-754a-46a2-b442-4acb3de7d369,Supreme Garlic Bread,"cheesy garlic bread topped with golden corn, onions and tomato",149,84b835e0-2e44-4efb-8e70-7f96ca882cd5,,,,
+99a819cc-2620-427c-855a-43ad2a151253,Pasta Arrabiata,"pasta made with spicy sauce containing garlic, tomatoes, and dried red chili peppers cooked in olive oil.",249,84b835e0-2e44-4efb-8e70-7f96ca882cd5,,,,
+30f77717-b2a8-4aa4-bae8-19f34b09e9c4,Hummus,"A classic lebanese dip, spread, or savory dish made from cooked, mashed chickpeas blended with tahini, lemon juice, and garlic",319,84b835e0-2e44-4efb-8e70-7f96ca882cd5,,,,
+732be65f-b1a3-4d23-ad20-b7e217fd38b2,Paneer Butter Masal,Indian dish of marinated paneer cheese served in a spiced gravy,249,ec5a4a18-beb6-426e-9932-2c282bbdf23f,,,,
+0037d4f1-5508-4865-ad90-485565d46bde,Baked Macaroni ,Macroni Baked with loads of cheese in a sweet white sauce,299,ec5a4a18-beb6-426e-9932-2c282bbdf23f,,,,
+d765f1de-8896-4186-8907-e7f1fe18ece2,Lasagna,Italian dish made of stacked layers of thin flat pasta alternating with fillings,349,ec5a4a18-beb6-426e-9932-2c282bbdf23f,,,,
+f693158e-090f-4fe0-8f8b-d487194e5c51,Bruschetta,grilled bread rubbed with garlic and topped with olive oil and salt,299,ec5a4a18-beb6-426e-9932-2c282bbdf23f,,,,
+f4c570bb-c3db-4337-b08b-2e0a717d2247,Hakka Noodles,"stir fried noodles, veggies and sauces",299,ec5a4a18-beb6-426e-9932-2c282bbdf23f,,,,
+bdde8498-3ecd-4f17-a564-646d81bb388a,Tandoori Paneer Sandwich,Grilled sandwich with tandoori sauce and paneer,179,326b42f2-ffd5-44fa-8505-d4361918022e,,,,
+9e09e038-aa13-4832-8514-5489c69031a9,Paneer Chilly Dry,"Paneer chunks sauteed well spices, chillies, onion, capsicum and soy sauce",319,326b42f2-ffd5-44fa-8505-d4361918022e,,,,
+890a156c-6961-498a-b005-a519efaccd06,Veg Manchurian,Classic Chinese dish,299,326b42f2-ffd5-44fa-8505-d4361918022e,,,,
+07089cf7-be2d-4b11-b118-960b5a7ad08d,Maha Burger,"A triple layer, triple sauce burger",199,326b42f2-ffd5-44fa-8505-d4361918022e,,,,
+a68d084f-0f9d-458e-a0db-a44682c7da8a,Farmhouse Pizza,"onions, olives, mushrooms, golden corn",399,326b42f2-ffd5-44fa-8505-d4361918022e,,,,
+26d974be-5a1c-4c84-80c8-360028b75bf1,Tacos,traditional Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling,249,d5413b31-c501-4005-b3b4-fc6245a938c0,,,,
+85dfa5c9-6eba-4614-abdf-93acdeea2a29,Choco Lava Cake,combination of the elements of a chocolate cake and a soufflé,99,d5413b31-c501-4005-b3b4-fc6245a938c0,,,,
+c35f6b28-e5bb-41e7-81e1-0a71dc991b26,Supreme Garlic Bread,"cheesy garlic bread topped with golden corn, onions and tomato",149,d5413b31-c501-4005-b3b4-fc6245a938c0,,,,
+a187b7f3-2111-4d8f-b1b6-ed20a800f1d9,Pasta Arrabiata,"pasta made with spicy sauce containing garlic, tomatoes, and dried red chili peppers cooked in olive oil.",249,d5413b31-c501-4005-b3b4-fc6245a938c0,,,,
+15e4c946-a22c-4d77-952e-125aa37e6281,Hummus,"A classic lebanese dip, spread, or savory dish made from cooked, mashed chickpeas blended with tahini, lemon juice, and garlic",319,d5413b31-c501-4005-b3b4-fc6245a938c0,,,,
+b669ca3a-bd15-4b77-a1d9-e01677f86829,Paneer Butter Masal,Indian dish of marinated paneer cheese served in a spiced gravy,249,d2dd7d84-8c06-49e3-86fc-4cdf3d8fe082,,,,
+116cbc8b-d661-4654-9271-96ad320b8c87,Baked Macaroni ,Macroni Baked with loads of cheese in a sweet white sauce,299,d2dd7d84-8c06-49e3-86fc-4cdf3d8fe082,,,,
+1def9447-0bab-40c5-a029-0647f2f79e1b,Lasagna,Italian dish made of stacked layers of thin flat pasta alternating with fillings,349,d2dd7d84-8c06-49e3-86fc-4cdf3d8fe082,,,,
+f117a77f-5391-46e3-ab2f-c92e62cf645a,Bruschetta,grilled bread rubbed with garlic and topped with olive oil and salt,299,d2dd7d84-8c06-49e3-86fc-4cdf3d8fe082,,,,
+391436c2-fe24-4c18-968d-ad7be6cb1383,Hakka Noodles,"stir fried noodles, veggies and sauces",299,d2dd7d84-8c06-49e3-86fc-4cdf3d8fe082,,,,
