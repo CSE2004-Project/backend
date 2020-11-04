@@ -5,6 +5,7 @@ const morgan = require('./logging/morgan');
 const routes = require('./routes');
 const db = require('./database/connection');
 const logger = require('./logging/logger');
+const cors = require('cors');
 
 const app = express();
 
@@ -35,6 +36,7 @@ require('./models/relations');
 
 // Logging
 app.use(morgan);
+app.use(cors());
 
 // Import Routes
 const userRoutes = require('./routes/user');

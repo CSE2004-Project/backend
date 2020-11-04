@@ -1,0 +1,14 @@
+restaurantId,restaurantName,addressLine1,addressLine2,state,city,pincode
+21dbe9a4-78b7-466b-bb70-68118f10f5e6,The Vellore Kitchen,"No:1,Near Green Circle",NH 46 Service Rd,Tamil Nadu,Vellore,632004
+18e5f47b-0cec-40eb-a928-2a427e360013,Lalit Vihar,"12, KVS Chetty St","Sripuram, Beripettai",Tamil Nadu,Vellore,632004
+22d9792a-9026-404c-8acc-666912b2dac7,Hotel Alankar,Old Bypass Road,"Thottapalayam, near Bus stand",Tamil Nadu,Vellore,632004
+6ea3ff9d-f91e-4cb6-b60d-e6b02edd280e,Earth Plate,"81,Arcot Road","Sripuram, Thottapalayam",Tamil Nadu,Vellore,632004
+687ec862-115d-43da-a1a9-2ddcd1853380,China Town,"Shop No 118, Arcot Rd, opp CMC Hospital","Sripuram, Kagithapatarai",Tamil Nadu,Vellore,632004
+2e575ea2-3144-4dd2-b4ba-103fda7fe4ea,Stellar Kitchen,"VIP Rd, Amit Nagar","Gayatri Nagar, Karelibaugh",Gujarat,Vadodara,390002
+41305dca-c6a2-42a4-9108-15c56e583f3f,Peshawari Restaurant,Ground Itcc welcome hotel,"RC Dutt Rd, Alkapuri",Gujarat,Vadodara,390007
+c0bf734a-706e-4d0c-997b-a8c6f4977cbe,Apple Bite,"4 Plus Complex, Sardar Nagar Main Rd","Astron Chowk, Nr Sardarnagar",Gujarat,Rajkot,360001
+84b835e0-2e44-4efb-8e70-7f96ca882cd5,Flavours Restaurant,Manhar Plot,Bhakti Nagar,Gujarat,Rajkot,360001
+ec5a4a18-beb6-426e-9932-2c282bbdf23f,Spice Kraft,"54/1/2A, Hazra Rd, Nr HDFC Bank","Dover Terrace, Ballygunge",West Bengal,Kolkata,700019
+326b42f2-ffd5-44fa-8505-d4361918022e,India Restaurant,"34, Karl Marx Sarani",Khidirpur,West Bengal,Kolkata,700023
+d5413b31-c501-4005-b3b4-fc6245a938c0,Karavalli,"Vivanta Bengaluru, 66",Residency Rd,Karnataka,Bengaluru,560025
+d2dd7d84-8c06-49e3-86fc-4cdf3d8fe082,RajHans Restaurant,"St Marks Rd, Srinivas Nagar","Shanthala Nagar, Ashok Nagar",Karnataka,Bengaluru,560001
